@@ -1,4 +1,4 @@
-package org.sophize.data;
+package org.sophize.datamodel;
 
 import java.util.*;
 import com.fasterxml.jackson.annotation.*;

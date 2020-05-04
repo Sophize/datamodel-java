@@ -6,7 +6,7 @@ cp ../datamodel-json/resource.json ../datamodel-json/language.json ../datamodel-
 quicktype -s schema ./tmp/resource.json -o ./Resource.java
 
 declare -a resourceTypes=("Term" "Proposition" "Argument" "Beliefset" "Article" "Project")
-java_path="src/main/java/org/sophize/data"
+java_path="src/main/java/org/sophize/datamodel"
 
 for i in "${resourceTypes[@]}"
 do

@@ -1,4 +1,4 @@
-package org.sophize.data;
+package org.sophize.datamodel;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
