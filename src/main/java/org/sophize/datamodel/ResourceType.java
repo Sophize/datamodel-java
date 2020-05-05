@@ -1,4 +1,4 @@
-package org.sophize.data;
+package org.sophize.datamodel;
 
 public enum ResourceType {
   UNKNOWN,
