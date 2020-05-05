@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.sophize</groupId>
     <artifactId>datamodel</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1</version>
 
 
     <name>Datamodel for Sophize development</name>
@@ -135,7 +133,7 @@
                 <executions>
                     <execution>
                         <id>attach-javadoc</id>
-                        <goals></goals>
+                        <goals />
                     </execution>
                 </executions>
             </plugin>
@@ -188,6 +186,6 @@
         <connection>scm:git:git@github.com:Sophize/datamodel-java.git</connection>
         <developerConnection>scm:git:git@github.com:Sophize/datamodel-java.git</developerConnection>
         <url>https://sophize.org</url>
-        <tag>HEAD</tag>
+        <tag>datamodel-0.1</tag>
     </scm>
 </project>
