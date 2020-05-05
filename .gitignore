@@ -1,4 +1,6 @@
 .idea/
+target/
+datamodel.iml
 
 # Compiled class file
 *.class
