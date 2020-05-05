@@ -3,7 +3,7 @@ package org.sophize.datamodel;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.sophize.data.ResourceUtils.toJsonString;
+import static org.sophize.datamodel.ResourceUtils.toJsonString;
 
 class ResourceUtilsTest {
 
@@ -16,9 +16,9 @@ class ResourceUtilsTest {
     contributor.setHandle("abc");
     originalTerm.setContributor(contributor);
 
-    ResourceUtils.writeJson("orange", originalTerm);
+    ResourceUtils.writeJson("", "orange", originalTerm);
 
-    Term readTerm = (Term)ResourceUtils.readResource("T_orange.json");
+    Term readTerm = (Term) ResourceUtils.readResource("T_orange.json");
 
     Assertions.assertEquals(toJsonString(readTerm), toJsonString(originalTerm));
   }
