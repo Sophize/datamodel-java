@@ -4,6 +4,7 @@ import java.util.*;
 import com.fasterxml.jackson.annotation.*;
 
 public class Resource {
+    private String assignablePtr;
     private Citation[] citations;
     private User contributor;
     private Boolean indexable;
@@ -11,6 +12,11 @@ public class Resource {
     private String notPermanentPtr;
     private String permanentPtr;
     private String[] tags;
+
+    @JsonProperty("assignablePtr")
+    public String getAssignablePtr() { return assignablePtr; }
+    @JsonProperty("assignablePtr")
+    public void setAssignablePtr(String value) { this.assignablePtr = value; }
 
     @JsonProperty("citations")
     public Citation[] getCitations() { return citations; }

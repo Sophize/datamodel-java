@@ -5,9 +5,18 @@ mkdir tmp
 cp ../datamodel-json/resource.json ../datamodel-json/language.json ../datamodel-json/metaLanguage.json ../datamodel-json/user.json ../datamodel-json/author.json ../datamodel-json/citation.json ../datamodel-json/resourceReference.json ./tmp
 quicktype -s schema ./tmp/resource.json -o ./Resource.java
 
-declare -a resourceTypes=("Term" "Proposition" "Argument" "Beliefset" "Article" "Project")
 java_path="src/main/java/org/sophize/datamodel"
 
+declare -a otherTypes=("Author" "Citation" "Language" "MetaLanguage" "Resource" "User" "MachineRequest" "MachineResponse")
+for i in "${otherTypes[@]}"
+do
+   echo "other:$i"
+   original_json="../datamodel-json/${i,}.json"
+   final_java="$java_path/$i.java"
+   quicktype -s schema $original_json -o $final_java --package org.sophize.datamodel
+done
+
+declare -a resourceTypes=("Term" "Proposition" "Argument" "Beliefset" "Article" "Project" "Machine")
 for i in "${resourceTypes[@]}"
 do
    echo "$i"
@@ -20,15 +29,6 @@ do
    sed '/public class/ s/{$/extends Resource {/' $tmp_java > $final_java
 done
 
-declare -a otherTypes=("Author" "Citation" "Language" "MetaLanguage" "Resource" "User")
-
-for i in "${otherTypes[@]}"
-do
-   echo "other:$i"
-   original_json="../datamodel-json/${i,}.json"
-   final_java="$java_path/$i.java"
-   quicktype -s schema $original_json -o $final_java --package org.sophize.datamodel
-done
-
+rm "$java_path/Converter.java"
 rm -Rf tmp
 rm *.java
