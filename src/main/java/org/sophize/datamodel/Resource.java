@@ -7,6 +7,7 @@ public class Resource {
     private String assignablePtr;
     private Citation[] citations;
     private User contributor;
+    private String ephemeralID;
     private Boolean indexable;
     private String[] names;
     private String notPermanentPtr;
@@ -27,6 +28,11 @@ public class Resource {
     public User getContributor() { return contributor; }
     @JsonProperty("contributor")
     public void setContributor(User value) { this.contributor = value; }
+
+    @JsonProperty("ephemeralId")
+    public String getEphemeralID() { return ephemeralID; }
+    @JsonProperty("ephemeralId")
+    public void setEphemeralID(String value) { this.ephemeralID = value; }
 
     @JsonProperty("indexable")
     public Boolean getIndexable() { return indexable; }

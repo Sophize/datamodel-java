@@ -4,10 +4,16 @@ import java.util.*;
 import com.fasterxml.jackson.annotation.*;
 
 public class Machine extends Resource {
+    private String defaultMaterializeDataset;
     private String description;
     private String[] premiseMachines;
     private String[] premisePropositions;
     private String serverName;
+
+    @JsonProperty("defaultMaterializeDataset")
+    public String getDefaultMaterializeDataset() { return defaultMaterializeDataset; }
+    @JsonProperty("defaultMaterializeDataset")
+    public void setDefaultMaterializeDataset(String value) { this.defaultMaterializeDataset = value; }
 
     @JsonProperty("description")
     public String getDescription() { return description; }
