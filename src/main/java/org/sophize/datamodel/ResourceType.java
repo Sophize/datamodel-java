@@ -8,5 +8,6 @@ public enum ResourceType {
   ARGUMENT,
   BELIEFSET,
   ARTICLE,
-  PROJECT
+  PROJECT,
+  MACHINE
 }
