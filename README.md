@@ -10,7 +10,7 @@ To publish a new version of the library to maven, run the following commands
 ```
 mvn clean verify
 mvn release:prepare
-mvn release: perform
+mvn release:perform
 
 git push --tags
 git push origin master
