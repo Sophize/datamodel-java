@@ -4,7 +4,7 @@
 
     <groupId>org.sophize</groupId>
     <artifactId>datamodel</artifactId>
-    <version>0.2.3</version>
+    <version>0.2.4-SNAPSHOT</version>
 
 
     <name>Datamodel for Sophize development</name>
@@ -186,6 +186,6 @@
         <connection>scm:git:git@github.com:Sophize/datamodel-java.git</connection>
         <developerConnection>scm:git:git@github.com:Sophize/datamodel-java.git</developerConnection>
         <url>https://sophize.org</url>
-        <tag>datamodel-0.2.3</tag>
+        <tag>HEAD</tag>
     </scm>
 </project>
