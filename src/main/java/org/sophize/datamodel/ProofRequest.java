@@ -3,12 +3,12 @@ package org.sophize.datamodel;
 import java.util.*;
 import com.fasterxml.jackson.annotation.*;
 
-public class MachineRequest {
+public class ProofRequest {
     private Boolean fetchProof;
     private Boolean fetchUpdatedProposition;
     private String machinePtr;
+    private Boolean parseLenient;
     private Proposition proposition;
-    private Boolean tryCompletingProposition;
 
     @JsonProperty("fetchProof")
     public Boolean getFetchProof() { return fetchProof; }
@@ -25,13 +25,13 @@ public class MachineRequest {
     @JsonProperty("machinePtr")
     public void setMachinePtr(String value) { this.machinePtr = value; }
 
+    @JsonProperty("parseLenient")
+    public Boolean getParseLenient() { return parseLenient; }
+    @JsonProperty("parseLenient")
+    public void setParseLenient(Boolean value) { this.parseLenient = value; }
+
     @JsonProperty("proposition")
     public Proposition getProposition() { return proposition; }
     @JsonProperty("proposition")
     public void setProposition(Proposition value) { this.proposition = value; }
-
-    @JsonProperty("tryCompletingProposition")
-    public Boolean getTryCompletingProposition() { return tryCompletingProposition; }
-    @JsonProperty("tryCompletingProposition")
-    public void setTryCompletingProposition(Boolean value) { this.tryCompletingProposition = value; }
 }

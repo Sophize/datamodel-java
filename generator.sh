@@ -7,7 +7,7 @@ quicktype -s schema ./tmp/resource.json -o ./Resource.java
 
 java_path="src/main/java/org/sophize/datamodel"
 
-declare -a otherTypes=("Author" "Citation" "Language" "MetaLanguage" "Resource" "User" "MachineRequest" "MachineResponse")
+declare -a otherTypes=("Author" "Citation" "Language" "MetaLanguage" "Resource" "User" "Page" "ProofRequest" "ProofResponse")
 for i in "${otherTypes[@]}"
 do
    echo "other:$i"

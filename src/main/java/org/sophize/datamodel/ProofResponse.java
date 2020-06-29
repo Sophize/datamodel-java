@@ -3,7 +3,7 @@ package org.sophize.datamodel;
 import java.util.*;
 import com.fasterxml.jackson.annotation.*;
 
-public class MachineResponse {
+public class ProofResponse {
     private String existingPropositionPtr;
     private String message;
     private Argument[] proofArguments;

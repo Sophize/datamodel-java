@@ -25,6 +25,7 @@ public class ResourceUtils {
     CLASS_TO_RESOURCE_CODE.put(Beliefset.class, "B");
     CLASS_TO_RESOURCE_CODE.put(Article.class, "R");
     CLASS_TO_RESOURCE_CODE.put(Project.class, "J");
+    CLASS_TO_RESOURCE_CODE.put(Machine.class, "M");
     for (Map.Entry<Class, String> entry : CLASS_TO_RESOURCE_CODE.entrySet()) {
       RESOURCE_TO_CLASS_CODE.put(entry.getValue(), entry.getKey());
     }
