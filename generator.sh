@@ -1,5 +1,4 @@
 #! /bin/bash
-# remove the allof line, we will use java inheritance to get the 
 rm -Rf tmp
 mkdir tmp
 cp ../datamodel-json/resource.json ../datamodel-json/language.json ../datamodel-json/metaLanguage.json ../datamodel-json/user.json ../datamodel-json/author.json ../datamodel-json/citation.json ../datamodel-json/resourceReference.json ./tmp
@@ -7,7 +6,7 @@ quicktype -s schema ./tmp/resource.json -o ./Resource.java
 
 java_path="src/main/java/org/sophize/datamodel"
 
-declare -a otherTypes=("Author" "Citation" "Language" "MetaLanguage" "Resource" "User" "Page" "ProofRequest" "ProofResponse")
+declare -a otherTypes=("Author" "Citation" "Language" "MetaLanguage" "Resource" "User" "Page" "ProofRequest" "ProofResponse" "AccessType" "LicenseType" "License" "Dataset" "ValidityStatus" "ValidityUpdate" "ResourceValidity")
 for i in "${otherTypes[@]}"
 do
    echo "other:$i"
